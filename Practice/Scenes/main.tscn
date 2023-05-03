@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://8bleo5d65x2r"]
+[gd_scene load_steps=3 format=3 uid="uid://8bleo5d65x2r"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_40wkt"]
+[ext_resource type="PackedScene" uid="uid://q6rgp6gdv81v" path="res://Scenes/floor.tscn" id="2_3wsap"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_40wkt")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="Floor" parent="Timer" instance=ExtResource("2_3wsap")]
+position = Vector2(546, 621)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,5 +1,7 @@
-VisibleOnScreenNotifier2D
-CollisionShape2D
 Sprite2D
+CollisionShape2D
+StaticBody2D
+Timer
+VisibleOnScreenNotifier2D
 CharacterBody2D
 Node

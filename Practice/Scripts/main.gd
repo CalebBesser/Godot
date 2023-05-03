@@ -11,7 +11,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("Space"):
-		var circle = circleScene.instantiate();
-		circle.position = Vector2(randf_range(40, 1000), randf_range(40, 600));
-		add_child(circle);
+	#if Input.is_action_just_pressed("Space"):
+		#var circle = circleScene.instantiate();
+		#circle.position = Vector2(randf_range(40, 1000), randf_range(40, 600));
+		#add_child(circle);
+	pass
+
+
+func _on_timer_timeout():
+	var circle = circleScene.instantiate();
+	circle.position = Vector2(randf_range(40, 1000), randf_range(40, 600));
+	add_child(circle);
