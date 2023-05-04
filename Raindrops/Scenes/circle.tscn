@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cycetu1fipvjm"]
 
-[ext_resource type="Script" path="res://Scenes/circle.gd" id="1_u7wdb"]
+[ext_resource type="Script" path="res://Scripts/circle.gd" id="1_j4od2"]
 [ext_resource type="Texture2D" uid="uid://c4s7ybmjmp48n" path="res://Assets/raindrop.png" id="2_tqlqc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ucnx3"]
@@ -9,7 +9,7 @@ height = 18.2857
 
 [node name="Circle" type="CharacterBody2D"]
 collision_mask = 2
-script = ExtResource("1_u7wdb")
+script = ExtResource("1_j4od2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)

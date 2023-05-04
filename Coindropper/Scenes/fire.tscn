@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d8yvcgxu3hov"]
+
+[ext_resource type="Texture2D" uid="uid://do3tlquhe3dd7" path="res://Assets/Fire.png" id="1_h0r0v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3ntdu"]
+radius = 61.4003
+
+[node name="Fire" type="Area2D"]
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_h0r0v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3ntdu")
