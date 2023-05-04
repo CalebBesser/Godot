@@ -2,8 +2,9 @@ extends CharacterBody2D
 
 var grav = 50;
 const speed = 200;
-var screen_size
+var screen_size;
 
+signal coinTouch;
 
 func _ready():
 	screen_size = get_viewport_rect().size;
@@ -30,3 +31,7 @@ func get_input(delta):
 	position += velocity * delta;
 	position.x = clamp(position.x, 0, screen_size.x);
 
+
+
+func _on_area_2d_area_entered(area):
+	print(area.get_name());

@@ -1,5 +1,11 @@
+res://Scenes/coin.tscn
+res://Scripts/coin.gd
+res://Scenes/fire.tscn
+res://Scripts/fire.gd
 res://Scenes/main.tscn
 res://Scenes/character.tscn
-res://Scenes/coin.tscn
-res://Scenes/fire.tscn
 res://Scenes/floor.tscn
+res://Scripts/main.gd
+res://Scenes/score.tscn
+res://Scripts/score.gd
+res://Scripts/character.gd
