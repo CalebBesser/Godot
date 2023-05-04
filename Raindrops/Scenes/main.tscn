@@ -11,6 +11,6 @@ wait_time = 0.2
 autostart = true
 
 [node name="Floor" parent="Timer" instance=ExtResource("2_3wsap")]
-position = Vector2(546, 621)
+position = Vector2(576, 626)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

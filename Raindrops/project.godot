@@ -10,10 +10,15 @@ config_version=5
 
 [application]
 
-config/name="Practice"
+config/name="RainDrops"
 run/main_scene="res://Scenes/main.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://Assets/icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
 
 [input]
 

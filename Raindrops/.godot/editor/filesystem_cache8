@@ -1,0 +1,14 @@
+2a60927148abd1d33b818b535e306557
+::res://::1683172387
+::res://Assets/::1683174181
+floor.png::CompressedTexture2D::203294238865133904::1683174181::1683174213::1::::<><>::
+icon.svg::CompressedTexture2D::4722034698883671033::1683172341::1683172389::1::::<><>::
+raindrop.png::CompressedTexture2D::6847462506771043771::1683173798::1683173857::1::::<><>::
+raindrop_floor.png::CompressedTexture2D::718938382375545496::1683173855::1683173857::1::::<><>::
+::res://Scenes/::1683173999
+circle.gd::GDScript::-1::1683173995::0::1::::<>CharacterBody2D<>::
+circle.tscn::PackedScene::6461780259132757418::1683173999::0::1::::<><>::res://Scenes/circle.gd<>uid://c4s7ybmjmp48n
+floor.tscn::PackedScene::1188060948241505509::1683173999::0::1::::<><>::uid://b8jnhsfqk0x42
+main.tscn::PackedScene::2318972029755152963::1683173999::0::1::::<><>::res://Scripts/main.gd<>uid://q6rgp6gdv81v
+::res://Scripts/::1683172341
+main.gd::GDScript::-1::1683172341::0::1::::<>Node<>::
