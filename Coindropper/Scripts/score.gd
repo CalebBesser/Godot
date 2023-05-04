@@ -1,17 +1,17 @@
 extends Label
 
-var score = 0;
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	self.text = str(score);
+	self.text = "Score: 0";
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-	
 
 
-func _on_touch():
-	score = score + 1;
-	self.text = str(score);
+
+func _on_character_coin_touch(score):
+	var format = "Score: %d";
+	var scoreText = format % [score];
+	self.text = scoreText;

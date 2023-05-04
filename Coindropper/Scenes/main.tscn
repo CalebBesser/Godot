@@ -16,3 +16,6 @@ position = Vector2(578, 515)
 scale = Vector2(0.8, 0.8)
 
 [node name="Label" parent="." instance=ExtResource("4_52hib")]
+
+[connection signal="coinTouch" from="character" to="Label" method="_on_character_coin_touch"]
+[connection signal="gameOver" from="character" to="." method="_on_character_game_over"]

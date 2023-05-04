@@ -3,8 +3,10 @@ extends CharacterBody2D
 var grav = 50;
 const speed = 200;
 var screen_size;
+var score = 0;
 
-signal coinTouch;
+signal coinTouch(score);
+signal gameOver;
 
 func _ready():
 	screen_size = get_viewport_rect().size;
@@ -34,4 +36,8 @@ func get_input(delta):
 
 
 func _on_area_2d_area_entered(area):
-	print(area.get_name());
+	if area.is_in_group("Coin"):
+		score = score + 1;
+		coinTouch.emit(score);
+	elif area.is_in_group("Fire"):
+		gameOver.emit();

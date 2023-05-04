@@ -12,10 +12,7 @@ func _ready():
 	timer.wait_time = 1;
 	timer.start();
 	timer.timeout.connect(_on_timer_timeout);
-	var char = get_node("character");
-	char.coinTouch.connect($Label._on_touch.bind());
-
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
@@ -26,3 +23,7 @@ func _on_timer_timeout():
 	var actual = item.instantiate();
 	add_child(actual);
 	actual.position = Vector2(randf_range(0, get_viewport().size.x), 0);
+
+
+func _on_character_game_over():
+	get_tree().change_scene_to_file("res://Scenes/game_over.tscn");
