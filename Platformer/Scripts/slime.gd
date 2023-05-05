@@ -4,6 +4,8 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -29,5 +31,5 @@ func _physics_process(delta):
 
 
 func _on_area_2d_area_entered(area):
-	if area.is_in_group("enemySlime") or area.is_in_group("bullet"):
-		get_tree().change_scene_to_file("res://Scenes/game_over.tscn");
+	if area.is_in_group("enemySlime") or area.is_in_group("bullet") or area.is_in_group("rock"):
+		Signals.emit_signal("hit");

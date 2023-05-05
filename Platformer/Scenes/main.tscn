@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://c7l3gxpk5yft4" path="res://Scenes/brick_floor.tscn" id="1_cy58k"]
 [ext_resource type="PackedScene" uid="uid://chswvm7mnwq0t" path="res://Scenes/slime.tscn" id="2_gvux1"]
-[ext_resource type="PackedScene" uid="uid://cmkw7ehit4nxw" path="res://Scenes/enemy_spawner.tscn" id="3_i2ctu"]
-[ext_resource type="PackedScene" uid="uid://hgyoqo183at8" path="res://Scenes/bullet_spawner.tscn" id="4_7aeg2"]
+[ext_resource type="PackedScene" uid="uid://dam8070bgew73" path="res://Scenes/spawner.tscn" id="3_iy5y2"]
+[ext_resource type="PackedScene" uid="uid://dotj1epfgnkxr" path="res://Scenes/timer.tscn" id="4_mm07u"]
 
 [node name="main" type="Node"]
 
@@ -13,6 +13,6 @@ layer_0/tile_data = PackedInt32Array(589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 5
 [node name="slime" parent="." instance=ExtResource("2_gvux1")]
 position = Vector2(369, 405)
 
-[node name="enemySpawner" parent="." instance=ExtResource("3_i2ctu")]
+[node name="Spawner" parent="." instance=ExtResource("3_iy5y2")]
 
-[node name="bulletSpawner" parent="." instance=ExtResource("4_7aeg2")]
+[node name="timer" parent="." instance=ExtResource("4_mm07u")]
