@@ -1,5 +1,10 @@
 extends Node
 
+var manual_mine = preload("res://Scenes/manual_mine.tscn");
+var type = "";
+signal spawned_mine();
+signal opened_shop;
+signal closed_shop;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,14 +13,39 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	update_highlighter();
+	pass
+
+func _input(event):
+	if event.is_action("left_click"):
+		if Globals.canBuild:
+			var mine = manual_mine.instantiate();
+			add_child(mine);
+			match type:
+				"coal":
+					mine.type = "coal";
+				"iron":
+					mine.type = "iron";
+			mine.position = Vector2(int(Globals.mouse_pos.x / 16) * 16, int(Globals.mouse_pos.y / 16) * 16)
+			spawned_mine.emit()
+			print("Built")
+	if event.is_action("s button"):
+		opened_shop.emit();
 
 
-func update_highlighter():
-	var mouse_pos = get_viewport().get_mouse_position()
-	var grid_pos = Vector2(
-		int(mouse_pos.x / 16),
-		int(mouse_pos.y / 16)
-	)
-	var highlighter_pos = grid_pos * 16 + Vector2(8, 8)
-	$HighLighter.position = highlighter_pos
+func _on_shop_quit():
+	closed_shop.emit();
+
+
+func _on_shop_mine_pressed(_type):
+	type = _type;
+	Globals.canBuild = true;
+	print(type)
+
+
+
+func _on_shop_entered():
+	Globals.canBuild = false;
+
+
+func _on_shop_exited():
+	Globals.canBuild = true;

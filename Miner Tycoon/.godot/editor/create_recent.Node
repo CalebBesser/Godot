@@ -1,6 +1,16 @@
+CollisionShape2D
+Area2D
+AnimatedSprite2D
 Sprite2D
+TextureButton
+Button
+HBoxContainer
+TabContainer
+TabBar
+Label
+Node2D
+ColorRect
 TileMap
 Camera2D
-CollisionShape2D
 StaticBody2D
 Node

@@ -1,0 +1,97 @@
+[gd_scene load_steps=11 format=3 uid="uid://d3tashgetpr18"]
+
+[ext_resource type="Script" path="res://Scripts/Shop.gd" id="1_fix71"]
+[ext_resource type="Texture2D" uid="uid://sppeimxl61gj" path="res://Assets/manual_coal.tres" id="2_ie4hc"]
+[ext_resource type="Texture2D" uid="uid://cwj32a65yrfra" path="res://Assets/manual_iron.tres" id="3_vae70"]
+[ext_resource type="Texture2D" uid="uid://btcyxhqsi80ra" path="res://Assets/manual_steel.tres" id="4_b70ew"]
+[ext_resource type="Texture2D" uid="uid://cfpyg188mgnu7" path="res://Assets/manual_gold.tres" id="5_jjijm"]
+[ext_resource type="Texture2D" uid="uid://dt3qogpa2shdx" path="res://Assets/manual_diamond.tres" id="6_dm2j7"]
+[ext_resource type="Texture2D" uid="uid://cl7csuw2ojkh3" path="res://Assets/manual_emerald.tres" id="7_is32c"]
+[ext_resource type="Texture2D" uid="uid://dmyonmvbekl4s" path="res://Assets/manual_ruby.tres" id="8_61r5a"]
+[ext_resource type="Texture2D" uid="uid://ccjxdoxoqlacv" path="res://Assets/manual_sapphire.tres" id="9_a1e06"]
+[ext_resource type="Texture2D" uid="uid://beluiut5di6l0" path="res://Assets/manual_amethyst.tres" id="10_5imk1"]
+
+[node name="TabContainer" type="TabContainer"]
+offset_right = 448.0
+offset_bottom = 40.0
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+mouse_default_cursor_shape = 2
+clip_tabs = false
+script = ExtResource("1_fix71")
+
+[node name="Manual Mines" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Quit" type="Button" parent="Manual Mines"]
+layout_mode = 2
+text = "X"
+
+[node name="Coal" type="Button" parent="Manual Mines"]
+layout_mode = 2
+text = "Coal"
+icon = ExtResource("2_ie4hc")
+alignment = 0
+icon_alignment = 2
+
+[node name="Iron" type="Button" parent="Manual Mines"]
+layout_mode = 2
+text = "Iron"
+icon = ExtResource("3_vae70")
+icon_alignment = 2
+
+[node name="Steel" type="Button" parent="Manual Mines"]
+layout_mode = 2
+text = "Steel"
+icon = ExtResource("4_b70ew")
+icon_alignment = 2
+
+[node name="Gold" type="Button" parent="Manual Mines"]
+layout_mode = 2
+text = "Gold"
+icon = ExtResource("5_jjijm")
+icon_alignment = 2
+
+[node name="Diamond" type="Button" parent="Manual Mines"]
+layout_mode = 2
+text = "Diamond"
+icon = ExtResource("6_dm2j7")
+icon_alignment = 2
+
+[node name="Emerald" type="Button" parent="Manual Mines"]
+layout_mode = 2
+text = "Emerald"
+icon = ExtResource("7_is32c")
+icon_alignment = 2
+
+[node name="Ruby" type="Button" parent="Manual Mines"]
+layout_mode = 2
+text = "Ruby"
+icon = ExtResource("8_61r5a")
+icon_alignment = 2
+
+[node name="Sapphire" type="Button" parent="Manual Mines"]
+layout_mode = 2
+text = "Sapphire"
+icon = ExtResource("9_a1e06")
+icon_alignment = 2
+
+[node name="Amethyst" type="Button" parent="Manual Mines"]
+layout_mode = 2
+text = "Amethyst"
+icon = ExtResource("10_5imk1")
+icon_alignment = 2
+
+[node name="Automatic Mines" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 2
+
+[node name="Automation Items" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 2
+
+[connection signal="mouse_entered" from="Manual Mines" to="." method="_on_manual_mines_mouse_entered"]
+[connection signal="mouse_exited" from="Manual Mines" to="." method="_on_manual_mines_mouse_exited"]
+[connection signal="pressed" from="Manual Mines/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Manual Mines/Coal" to="." method="_on_coal_pressed"]
+[connection signal="pressed" from="Manual Mines/Iron" to="." method="_on_iron_pressed"]

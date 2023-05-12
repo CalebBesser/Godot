@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://sppeimxl61gj"]
+
+[ext_resource type="Texture2D" uid="uid://dm58xy8pmcqp0" path="res://Assets/manual_mines_tier_1.png" id="1_fl83c"]
+
+[resource]
+atlas = ExtResource("1_fl83c")
+region = Rect2(0, 0, 16, 16)

@@ -2,7 +2,7 @@ extends Camera2D
 
 var mouse_start_pos;
 var screen_start_position;
-var max_scroll: Vector2 = Vector2(1200, 675)
+var max_scroll: Vector2 = Vector2(1200, 691)
 var min_zoom: float = 1.5;
 var max_zoom: float = 3.0;
 var dragging = false;
@@ -25,8 +25,8 @@ func _input(event):
 			new_pos.x =720
 		elif new_pos.x > max_scroll.x:
 			new_pos.x = max_scroll.x
-		if new_pos.y < 405:
-			new_pos.y = 405
+		if new_pos.y < 421:
+			new_pos.y = 421
 		elif new_pos.y > max_scroll.y:
 			new_pos.y = max_scroll.y
 		position = new_pos

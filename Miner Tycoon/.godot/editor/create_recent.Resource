@@ -1,0 +1,3 @@
+AtlasTexture
+SpriteFrames
+AnimationNode
