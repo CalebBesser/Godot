@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dos485ykylnv7"]
+
+[ext_resource type="Script" path="res://Scripts/turret.gd" id="1_c4h01"]
+[ext_resource type="Texture2D" uid="uid://bene5x4m6eb" path="res://Assets/Map/RedTurret.png" id="2_4mu6c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aiovr"]
+size = Vector2(48, 80)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iccru"]
+radius = 128.0
+
+[node name="Turret" type="Area2D"]
+script = ExtResource("1_c4h01")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+scale = Vector2(0.185, 0.185)
+texture = ExtResource("2_4mu6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_aiovr")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_iccru")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

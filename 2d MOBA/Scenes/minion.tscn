@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dplhbpx87gdu5"]
+
+[ext_resource type="Script" path="res://Scripts/minion.gd" id="1_fyusa"]
+[ext_resource type="Texture2D" uid="uid://c86ndp3hxwvv1" path="res://icon.svg" id="1_wn1of"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdhn5"]
+size = Vector2(32, 32)
+
+[node name="Minion" type="CharacterBody2D"]
+script = ExtResource("1_fyusa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_wn1of")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Minion"]]
+shape = SubResource("RectangleShape2D_hdhn5")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwr7a14fdqqiq"]
+
+[ext_resource type="Script" path="res://Scripts/GameTimeLabel.gd" id="1_cefof"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Timer" type="Panel" parent="."]
+offset_left = 1414.0
+offset_top = 1.0
+offset_right = 1478.0
+offset_bottom = 25.0
+
+[node name="Label" type="Label" parent="Timer"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_cefof")
