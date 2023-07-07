@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cynp3ut1cliy8"]
+
+[ext_resource type="Texture2D" uid="uid://18ygfqk1idv7" path="res://Assets/SpriteSheet.png" id="1_g73cv"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqpiu"]
+resource_name = "TIlser"
+texture = ExtResource("1_g73cv")
+1:0/0 = 0
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+1:2/0 = 0
+1:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+4:1/0 = 0
+4:0/0 = 0
+3:0/0 = 0
+2:0/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_lyrl2"]
+sources/1 = SubResource("TileSetAtlasSource_yqpiu")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_lyrl2")
+format = 2
+layer_0/name = "Ground"

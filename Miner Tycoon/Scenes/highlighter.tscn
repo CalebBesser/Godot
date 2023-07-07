@@ -1,0 +1,93 @@
+[gd_scene load_steps=14 format=3 uid="uid://7kfrogiy6i3l"]
+
+[ext_resource type="Script" path="res://Scripts/cursor.gd" id="1_3ig4w"]
+[ext_resource type="Texture2D" uid="uid://rob61k4v1cm0" path="res://Assets/Highlighter.png" id="1_gglui"]
+[ext_resource type="Texture2D" uid="uid://dm58xy8pmcqp0" path="res://Assets/manual_mines_tier_1.png" id="2_1frui"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x77dg"]
+atlas = ExtResource("2_1frui")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsmsw"]
+atlas = ExtResource("2_1frui")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4uy0g"]
+atlas = ExtResource("2_1frui")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyk4g"]
+atlas = ExtResource("2_1frui")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1hhe"]
+atlas = ExtResource("2_1frui")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byp8t"]
+atlas = ExtResource("2_1frui")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xd0ri"]
+atlas = ExtResource("2_1frui")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76t8c"]
+atlas = ExtResource("2_1frui")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgecq"]
+atlas = ExtResource("2_1frui")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s5gae"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gglui")
+}],
+"loop": true,
+"name": &"highlight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x77dg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsmsw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4uy0g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyk4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1hhe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byp8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xd0ri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76t8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgecq")
+}],
+"loop": true,
+"name": &"manual_mines",
+"speed": 5.0
+}]
+
+[node name="highlighter" type="Node2D"]
+z_index = 2
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_s5gae")
+animation = &"highlight"
+offset = Vector2(8, 8)
+script = ExtResource("1_3ig4w")

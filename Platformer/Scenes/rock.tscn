@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://8qwb1xbg37yf"]
+
+[ext_resource type="Script" path="res://Scripts/rock.gd" id="1_cvrkp"]
+[ext_resource type="Texture2D" uid="uid://0bhv0a4nack3" path="res://Assets/Rock.png" id="1_n46b2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rfjx6"]
+radius = 46.0977
+
+[node name="Area2D" type="Area2D" groups=["rock"]]
+scale = Vector2(0.5, 0.5)
+collision_layer = 4
+script = ExtResource("1_cvrkp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -4)
+shape = SubResource("CircleShape2D_rfjx6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_n46b2")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(1, 0.5)
+scale = Vector2(1.6, 1.85)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

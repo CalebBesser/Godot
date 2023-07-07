@@ -1,0 +1,13 @@
+res://Scenes/timer.tscn
+res://Scripts/timer.gd
+res://Scenes/main.tscn
+res://Scenes/brick_floor.tscn
+res://Scenes/slime.tscn
+res://Scenes/enemy.tscn
+res://Scenes/bullet.tscn
+res://Scenes/rock.tscn
+res://Scenes/spawner.tscn
+res://Scripts/slime.gd
+res://Scripts/signals.gd
+res://Scenes/game_over.tscn
+res://Scripts/gameoverlabel.gd

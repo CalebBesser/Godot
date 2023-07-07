@@ -1,0 +1,9 @@
+Node
+Label
+VisibleOnScreenNotifier2D
+Sprite2D
+CollisionShape2D
+Area2D
+CharacterBody2D
+Button
+TileMap
